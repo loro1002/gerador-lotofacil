@@ -1,0 +1,262 @@
+/* Container Principal */
+.app {
+  font-family: Arial, sans-serif;
+}
+
+/* Header */
+.header {
+  background: linear-gradient(90deg, #7a00b4, #c18cf7);
+  color: white;
+  padding: 20px;
+  text-align: center;
+  font-size: 1.2rem;
+}
+
+/* Hero Section */
+.hero {
+  display: flex;
+  justify-content: center;
+  margin: 20px;
+  background-color: #ffffff;
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' version='1.1' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:svgjs='http://svgjs.dev/svgjs' width='1440' height='560' preserveAspectRatio='none' viewBox='0 0 1440 560'%3e%3cg mask='url(%26quot%3b%23SvgjsMask1117%26quot%3b)' fill='none'%3e%3crect width='1440' height='560' x='0' y='0' fill='rgba(81%2c 46%2c 95%2c 1)'%3e%3c/rect%3e%3cpath d='M0%2c498.272C98.974%2c496.601%2c209.588%2c507.97%2c286.05%2c445.103C361.353%2c383.189%2c338.962%2c261.226%2c389.615%2c177.931C450.639%2c77.582%2c600.639%2c29.354%2c610.065%2c-87.714C619.292%2c-202.306%2c513.735%2c-293.223%2c434.24%2c-376.271C357.824%2c-456.103%2c272.517%2c-540.678%2c162.919%2c-554.85C57.256%2c-568.513%2c-29.587%2c-478.928%2c-131.981%2c-449.486C-235.187%2c-419.81%2c-368.64%2c-461.507%2c-440.195%2c-381.431C-511.636%2c-301.482%2c-466.653%2c-175.027%2c-472.881%2c-67.99C-478.512%2c28.785%2c-506.652%2c125.301%2c-475.01%2c216.93C-441.696%2c313.4%2c-380.138%2c402.855%2c-292.325%2c454.866C-205.815%2c506.105%2c-100.532%2c499.969%2c0%2c498.272' fill='%23452751'%3e%3c/path%3e%3cpath d='M1440 1060.125C1538.951 1041.211 1637.506 1048.393 1732.72 1015.481 1852.38 974.119 2020.0610000000001 963.648 2063.326 844.663 2107.594 722.921 1961.089 614.47 1923.625 490.46500000000003 1893.616 391.13599999999997 1913.664 283.09 1865.845 191.003 1809.358 82.22500000000002 1746.906-50.70500000000004 1627.73-79.34900000000005 1508.088-108.10500000000002 1410.931 24.94500000000005 1291.09 52.860000000000014 1160.324 83.32 1002.2149999999999 5.605000000000018 898.254 90.57400000000001 795.024 174.945 767.147 333.899 785.695 465.925 802.884 588.281 945.73 649.985 992.887 764.19 1042.973 885.489 955.858 1070.625 1143.057 1174.173 1215.123 1311.752 1084.6390000000001 1440 1060.125' fill='%235d356d'%3e%3c/path%3e%3c/g%3e%3cdefs%3e%3cmask id='SvgjsMask1117'%3e%3crect width='1440' height='560' fill='white'%3e%3c/rect%3e%3c/mask%3e%3c/defs%3e%3c/svg%3e");
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+/* Container para seções esquerda e direita */
+.container {
+  display: flex;
+  width: 100%;
+  color: white;
+  flex-wrap: wrap; /* Permite que as seções se movam para a linha seguinte em telas menores */
+}
+
+/* Seções de conteúdo */
+.left-section, .right-section {
+  flex: 1; /* Permite que ambas as seções ocupem espaço igual */
+  padding: 20px;
+}
+
+/* Container de análise de dados */
+.parse-data-container {
+  margin-bottom: 20px;
+}
+
+/* Estilo do textarea */
+textarea {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 5px;
+  border: 1px solid #ffffff;
+}
+
+/* Estilo dos botões */
+button {
+  background-color: #2a9d8f;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-top: 10px;
+}
+
+/* Hover para botões */
+button:hover {
+  background-color: #218c74;
+}
+
+/* Filtros */
+.filters {
+  margin-top: 20px;
+}
+
+.filters h4 {
+  margin-bottom: 10px;
+}
+
+.filters label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+/* Seção para seleção de jogos */
+.select-games {
+  margin-top: 20px;
+}
+
+.select-games label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+/* Container de jogos */
+.games-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 colunas de igual largura */
+  gap: 10px; /* Espaçamento entre os cards */
+}
+
+/* Estilo de cada jogo (card) */
+.game {
+  background-color: #f7f7f7;
+  padding: 10px; /* Ajuste o padding conforme necessário para reduzir o tamanho do card */
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  box-sizing: border-box; /* Inclui padding e border na largura total */
+}
+
+/* Título dos cards */
+.game h4 {
+  font-size: 16px; /* Ajuste o tamanho da fonte conforme necessário */
+  color: white;
+  margin: 0;
+  background: linear-gradient(90deg, #7a00b4, #c18cf7);
+  padding: 10px;
+  border-radius: 5px;
+}
+
+/* Números da Lotofácil */
+.lotofacil-numbers {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr); /* 5 colunas de igual largura */
+  gap: 10px; /* Espaçamento entre os números */
+}
+
+/* Estilo dos números */
+.number {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30px; /* Ajuste o tamanho conforme necessário */
+  height: 30px; /* Ajuste o tamanho conforme necessário */
+  background-color: #e9ecef;
+  border-radius: 50%;
+  font-size: 14px; /* Ajuste o tamanho da fonte conforme necessário */
+}
+
+/* Destacar números */
+.highlight {
+  background-color: #2a9d8f;
+  color: white;
+}
+
+/* Seção de doações */
+.donation-section {
+  text-align: center; /* Centraliza o conteúdo na seção de doações */
+}
+.donation-section p {
+  color: white;
+  font-weight: 700;
+}
+
+/* Botão Pix */
+.pix-button {
+  background-color: #e76f51;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-top: 10px;
+}
+
+.pix-button:hover {
+  background-color: #d04a35;
+}
+/* Modal de Verificação de Idade */
+.modal-age-verification {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  color: white;
+}
+
+.modal-age-verification h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.modal-age-verification button {
+  background-color: #2a9d8f;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  margin: 0 10px;
+}
+
+.modal-age-verification button:hover {
+  background-color: #218c74;
+}
+
+/* Modal de Doação */
+.modal-donation {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-donation .modal-content {
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  max-width: 500px;
+  width: 90%;
+}
+
+.modal-donation h2 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.modal-donation p {
+  margin-bottom: 20px;
+}
+
+.modal-donation .close-modal {
+  background-color: #e76f51;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.modal-donation .close-modal:hover {
+  background-color: #d04a35;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .games-container {
+    grid-template-columns: repeat(2, 1fr); /* 2 colunas em telas menores */
+  }
+}
+
+@media (max-width: 480px) {
+  .games-container {
+    grid-template-columns: 1fr; /* 1 coluna em telas muito pequenas */
+  }
+}

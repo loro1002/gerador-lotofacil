@@ -1,0 +1,181 @@
+/* Estilo geral do header */
+.header {
+    background: linear-gradient(45deg, #7a00b4, #c18cf7);
+    padding: 60px 20px;
+    position: relative;
+    text-align: center;
+    overflow: hidden;
+  }
+  
+  .header::before, .header::after {
+    content: '';
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    animation: float 6s ease-in-out infinite;
+    z-index: 0;
+  }
+  
+  .header::before {
+    top: -100px;
+    left: -100px;
+    animation-delay: 1s;
+  }
+  
+  .header::after {
+    bottom: -100px;
+    right: -100px;
+    animation-delay: 2s;
+  }
+  
+  @keyframes float {
+    0% {
+      transform: translate(0, 0);
+    }
+    50% {
+      transform: translate(20px, 20px);
+    }
+    100% {
+      transform: translate(0, 0);
+    }
+  }
+  
+  /* Estilo do conteúdo interno */
+  .header-content {
+    position: relative;
+    z-index: 1;
+    color: #fff;
+  }
+  
+  /* Título principal com efeito */
+  .title {
+    font-size: 3rem;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 700;
+    margin-bottom: 20px;
+    letter-spacing: 2px;
+    position: relative;
+    display: inline-block;
+    animation: fadeInUp 2s ease;
+  }
+  
+  .highlight {
+    color: #ffd700;
+    font-size: 1.2em;
+    position: relative;
+  }
+  
+  .highlight::before, .highlight::after {
+    content: '';
+    position: absolute;
+    height: 5px;
+    background: #ffd700;
+    width: 100%;
+    transform: scaleX(0);
+    transform-origin: center;
+    transition: transform 0.4s ease;
+  }
+  
+  .highlight::before {
+    top: -10px;
+    left: 0;
+  }
+  
+  .highlight::after {
+    bottom: -10px;
+    left: 0;
+  }
+  
+  .highlight:hover::before, .highlight:hover::after {
+    transform: scaleX(1);
+  }
+  
+  /* Animação de entrada */
+  @keyframes fadeInUp {
+    0% {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Subtítulo com leve animação */
+  .subtitle {
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+    color: #ecf0f1;
+    opacity: 0.8;
+    animation: fadeInUp 2.5s ease;
+  }
+  
+  /* Botão com efeitos */
+  .action-button {
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    color: #fff;
+    background-color: #ff007f;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+    position: relative;
+    z-index: 1;
+  }
+  
+  .action-button:hover {
+    background-color: #ff5cba;
+    transform: translateY(-5px);
+  }
+  
+  .action-button::before, .action-button::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 50px;
+    background-color: rgba(255, 255, 255, 0.15);
+    z-index: -1;
+    transition: all 0.3s ease;
+  }
+  
+  .action-button::before {
+    top: -5px;
+    left: 0;
+  }
+  
+  .action-button::after {
+    bottom: -5px;
+    left: 0;
+  }
+  
+  .action-button:hover::before {
+    top: 0;
+  }
+  
+  .action-button:hover::after {
+    bottom: 0;
+  }
+  
+  /* Responsividade */
+  @media (max-width: 768px) {
+    .title {
+      font-size: 2.2rem;
+    }
+  
+    .subtitle {
+      font-size: 1.2rem;
+    }
+  
+    .action-button {
+      font-size: 1rem;
+      padding: 10px 20px;
+    }
+  }
+  

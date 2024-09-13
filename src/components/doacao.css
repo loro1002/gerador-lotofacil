@@ -1,0 +1,120 @@
+/* Seção de doação */
+.donation-section {
+    background: linear-gradient(90deg, #7a00b4, #c18cf7);
+    color: #ecf0f1;
+    padding: 40px 20px;
+    margin-top: 50px;
+    position: relative;
+    clip-path: polygon(0 0, 100% 5%, 100% 100%, 0 95%);
+  }
+  
+  .content-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    flex-wrap: wrap; /* Torna a seção responsiva */
+  }
+  
+  /* Seção Esquerda */
+  .left-section {
+    flex: 1;
+    padding: 20px;
+  }
+  
+  .animated-heading {
+    font-size: 2.5rem;
+    color: #fff;
+    animation: fadeIn 1.5s ease-in-out;
+    margin-bottom: 20px;
+  }
+  
+  .animated-text {
+    font-size: 1.1rem;
+    color: #ecf0f1;
+    margin-bottom: 20px;
+    animation: slideIn 2s ease;
+  }
+  
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes slideIn {
+    0% {
+      opacity: 0;
+      transform: translateX(-100px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
+  /* Seção Direita */
+  .right-section {
+    flex: 1;
+    background-color: #fff;
+    color: #333;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    text-align: center;
+  }
+  .right-section p{
+    color: black;
+  }
+  .pix-donation p {
+    margin-bottom: 15px;
+    color: black;
+  }
+  
+  .pix-input {
+    width: 60%;
+    padding: 8px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-right: 10px;
+  }
+  
+  .copy-button {
+    padding: 8px 16px;
+    background-color: #7a00b4;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .copy-button:hover {
+    background-color: #c18cf7;
+  }
+  
+  /* Estilo do QR Code */
+  .qr-code-container img {
+    width: 200px;
+    margin-top: 20px;
+  }
+  
+  /* Responsividade */
+  @media (max-width: 768px) {
+    .content-container {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .left-section, .right-section {
+      width: 100%;
+      margin-bottom: 20px;
+    }
+  }
+  
